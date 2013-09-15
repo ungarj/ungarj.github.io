@@ -6,8 +6,18 @@ title: Joachim goes south&hellip;
 <div id="map"></div>
 
 <article id="story">
-    <section id="cover" class="cover active" data-zoom="8" data-latitude="48.2" data-longitude="16.37">
-        <h1>Hi there, </h1>
-        <p>This is a work in progress. Please check back often :D</p>
+    <section id="cover" class="cover active" data-zoom="10" data-latitude="48.2" data-longitude="16.37">
+        <h1>{{ page.title }}</h1>
+        <p>Let's think about something interesting to introduce visitors to this blog.</p>
     </section>
+
+    {% for post in site.posts %}
+    <section data-zoom="{{ post.zoom }}" data-latitude="{{ post.latitude }}" data-longitude="{{ post.longitude }}">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.teaser }}</p>
+        <p><a href="{{ post.url }}">Weiterlesen&hellip;</a></p>
+    </section>
+    {% endfor %}
+
+    <div style="height: 25em;"><!-- FIXME --></div>
 </article>
