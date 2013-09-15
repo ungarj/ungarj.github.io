@@ -27,6 +27,10 @@ body {
   background-color: white;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
 h1 { margin-bottom: 1em; }
 p { margin: 1em 0; }
 
@@ -78,7 +82,6 @@ article#story::-webkit-scrollbar {
 }
 #story #cover {
     margin-top: 50%;
-    padding-bottom: 2em;
 }
 #story #cover #logo {
     display: block;
